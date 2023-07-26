@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "0d0c759d-6ba9-46a1-a662-33b190cd2d88",
+		"name": "Tasks CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"manthan\",\n    \"password\": \"qwer\",\n    \"email\": \"mantha1n@gmail.com\",\n    \"mobile_no\": \"9728978985\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3009/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmE3NTM5MGRjZjc3YTA4ZGRiZjZmIiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4NjY2NCwiZXhwIjoxNjkwMjkwNjY0fQ.pMGPB6pf0MvNHH86NvMfIpjdpBNr9fAcEmFmLibmeMU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mantha1n@gmail.com\",\n    \"password\": \"qwer\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3009/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "delete task by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmJmM2M3MDgxZDQzMDdjOGIwNjk5IiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4ODE3MCwiZXhwIjoxNjkwMjkyMTcwfQ.RQ7KDHYLIzcne_nWsCYXDApK1QTlG9Az80-PCCE-9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3009/tasks/64bfc075ee924fa554fed829",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"tasks",
+								"64bfc075ee924fa554fed829"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmJmM2M3MDgxZDQzMDdjOGIwNjk5IiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4ODE3MCwiZXhwIjoxNjkwMjkyMTcwfQ.RQ7KDHYLIzcne_nWsCYXDApK1QTlG9Az80-PCCE-9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \" delete book\",\n    \"content\": \"10 pages\",\n    \"status\": \"completed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3009/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmJmM2M3MDgxZDQzMDdjOGIwNjk5IiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4ODE3MCwiZXhwIjoxNjkwMjkyMTcwfQ.RQ7KDHYLIzcne_nWsCYXDApK1QTlG9Az80-PCCE-9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Read book\",\n    \"content\":\"updated \",\n   \"status\":\"in-progress\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3009/tasks/64bfc075ee924fa554fed829",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"tasks",
+								"64bfc075ee924fa554fed829"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmJmM2M3MDgxZDQzMDdjOGIwNjk5IiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4ODE3MCwiZXhwIjoxNjkwMjkyMTcwfQ.RQ7KDHYLIzcne_nWsCYXDApK1QTlG9Az80-PCCE-9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3009/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "completed",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task by  id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjRiZmJmM2M3MDgxZDQzMDdjOGIwNjk5IiwiYWNjb3VudF90eXBlIjoidXNlciIsImlhdCI6MTY5MDI4ODE3MCwiZXhwIjoxNjkwMjkyMTcwfQ.RQ7KDHYLIzcne_nWsCYXDApK1QTlG9Az80-PCCE-9d0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3009/tasks/64bfc075ee924fa554fed829",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3009",
+							"path": [
+								"tasks",
+								"64bfc075ee924fa554fed829"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

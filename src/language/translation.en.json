@@ -1,0 +1,11 @@
+{
+  "ERR_INTERNAL_SERVER": "Internal Server Error.",
+  "USER_PROFILE_SUCCESS": "User profile created.",
+  "ERR_USER_PROFILE_EXIST": "User email {{EMAIL}} already exists, kindly choose another email address.",
+  "ERR_USER_DOESNT_EXIST": "User with email {{EMAIL}} doesn't exists",
+  "INVALID_CREDENTIAL": "Email or password is incorrect. Please enter valid credentials",
+  "LOGIN_SUCCESSFULL": "You have successfully logged in",
+  "USER_CREATED_SUCCESS": "User created successfully",
+  "INVALID_ID": "Invalid Id",
+  "ERR_UNAUTH": "You are unauthorized."
+}
